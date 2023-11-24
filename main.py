@@ -77,7 +77,7 @@ class CAT:
         self.dimage = create_dimage(self.image_shape[0],self.image_shape[1],self.image_shape[2])
         self.Bimage = self.dimage.copy()
         self.mode = "sleeping"   #3가지 모드
-        # mode 1 : "mouse" - 기존의 CAT의 기능인 마우스 모드(왼손 - 감도 조절)
+        # mode 1 : "mouse" - 초기 CAT의 기능인 마우스 모드
         # mode 2 : "keyboard" - 왼손과 오른손의 조합으로 키를 입력하는 모드
         # mode 0 : "sleeping" - 대기 상태, 모드 변경 기능
         #                       모든 모드에서 오른손과 왼손을 모두 주먹쥐면 이 모드로 변경
