@@ -17,8 +17,9 @@ print("done")
 print()
 
 print("loading EYES...",end = '')
-#model = keras.models.load_model(EYESOFCAT3.h5')
-model = keras.models.load_model(EYESOFCAT4.h5')
+PATH = "."
+#model = keras.models.load_model(PATH+'/EYESOFCAT3.h5')
+model = keras.models.load_model(PATH+'/EYESOFCAT4.h5')
 IDX = [x for x in range(0,32)]
 print("done")
 print()
