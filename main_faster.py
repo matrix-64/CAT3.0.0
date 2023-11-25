@@ -16,10 +16,9 @@ from kmcat import keyboardModeCAT
 print("done")
 print()
 
-print("loading EYES...",end = '')
-PATH = "C:/Users/JOOWAN/Desktop/jonghab/gifted/korea/projects/re_CAT_dataset"
-#model = keras.models.load_model(PATH+'/EYESOFCAT3.h5')
-model = keras.models.load_model(PATH+'/EYESOFCAT4.h5')
+print("loading EYES...",end = ''
+#model = keras.models.load_model('EYESOFCAT3.h5')
+model = keras.models.load_model('EYESOFCAT4.h5')
 IDX = [x for x in range(0,32)]
 print("done")
 print()
