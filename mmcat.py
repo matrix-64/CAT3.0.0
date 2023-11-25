@@ -42,7 +42,7 @@ class mouseModeCAT:
         self.Rclicking = False
         self.Dclicking = False
         self.mouse = RemoteMouse()
-        self.sense = 0 #왼손 숫자로 감도 조절(방식 : 카운트식)
+        self.sense = 3
         self.cus_bef = [-1,-1]
         self.cus_cur = [-1,-1]
         self.cus_dif = [0,0]
