@@ -1,5 +1,5 @@
-mediapipe==0.9.0.1
-numpy==1.21.6
+mediapipe
+numpy
 opencv-python==4.6.0.66
 PyAutoGUI==0.9.54
 pynput==1.7.6
