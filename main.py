@@ -1,28 +1,21 @@
-print("importing keras...",end = '')
-import keras
-print("done")
-print("importing modules...",end = '')
-import numpy as np
-import cv2
-import mediapipe as mp
-import pyautogui as pg
-import time
-print("done")
-print("waking mmcat up...",end = '')
-from mmcat import mouseModeCAT
-print("done")
-print("waking kmcat up...",end = '')
-from kmcat import keyboardModeCAT
-print("done")
-print()
+import warnings
+import os
+import absl.logging
 
-print("loading EYES...",end = '')
-PATH = "."
-#model = keras.models.load_model(PATH+'/EYESOFCAT3.h5')
-model = keras.models.load_model(PATH+'/EYESOFCAT4.h5')
-IDX = [x for x in range(0,32)]
-print("done")
-print()
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
+absl.logging.set_verbosity(absl.logging.ERROR)
+absl.logging._warn = lambda msg: open("absl_logs.txt", "a").write(msg + "\n")
+
+with warnings.catch_warnings():
+    warnings.simplefilter("ignore")
+    warnings.filterwarnings("ignore", category=UserWarning, module='urllib3')
+    from importingmodules import *
+    print("loading EYES...",end = '')
+    PATH = "."
+    #model = keras.models.load_model(PATH+'/EYESOFCAT3.h5')
+    model = keras.models.load_model(PATH+'/EYESOFCAT4.h5')
+    IDX = [x for x in range(0,32)]
+    print("done\n")
 
 pg.PAUSE = 0
 #pg.FAILSAFE = 0
@@ -230,8 +223,7 @@ class CAT:
 
 print("connecting cap...",end = '')
 cap = cv2.VideoCapture(0)
-print("done")
-print()
+print("done\n")
 
 global cat
 print("CAT woke up")
